@@ -31,7 +31,7 @@ public class AdminController {
 	public String adminRegistration() {
 		
 		return "adminRegistration";
-		
+	
 	}
 	
 	/* ------------------------- Account detail ----------------------*/
