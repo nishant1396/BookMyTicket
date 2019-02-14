@@ -109,12 +109,11 @@ button:hover {
 
 		 <select name="cityId" id="cityId">
 		 	  <option selected disabled>Select City</option>
-			  <option value="amd">Ahmedabad</option>
-			  <option value="mum">Mumbai</option>
-			  <option value="bng">Bangalore</option>
-			  <option value="del">Delhi</option>
-			  <option value="chn">Chennai</option>
-			  <option value="klt">Kolkata</option>
+			  
+			  	<c:forEach items="${cities}" var="city">
+			  		<option value="mum"> ${ city } </option>
+			  	</c:forEach>
+			
 		</select> 
 	</div>	
 	<br>
@@ -124,9 +123,10 @@ button:hover {
 	<div class="mainselection" >
 		<select name="theaterId" id="theaterId">
 		 	  <option selected disabled>Select Theater</option>
-			  <option value="pvr">PVR</option>
-			  <option value="inx">INOX</option>
-			  <option value="car">Carnival</option>
+		 	  
+		 	  <c:forEach items="${theaters}" var="theater">
+			  		<option value="mum"> ${ theater } </option>
+			  	</c:forEach>
 			  
 		</select> 
 	</div>
@@ -137,9 +137,9 @@ button:hover {
 	<div class="mainselection" >	
 		<select name="movieId" id="movieId">
 		 	  <option selected disabled>Select Movie</option>
-			  <option value="zr">Zero</option>
-			  <option value="bzr">Bazaar</option>
-			  <option value="fd">FryDay</option>
+			  <c:forEach items="${movies}" var="movie">
+			  		<option value="mum"> ${ movie } </option>
+			  	</c:forEach>
 			   
 		</select>
 	</div>
@@ -150,9 +150,9 @@ button:hover {
 	<div class="mainselection" > 
 		<select name="movieDate" id="movieDate">
 		 	  <option selected disabled>Select Date</option>
-			  <option value="2019-01-05">05/01/2019</option>
-			  <option value="2019-01-06">06/01/2019</option>
-			  <option value="2019-01-07">07/01/2019</option>
+			<c:forEach items="${dates}" var="date">
+			  		<option value="mum"> ${ date } </option>
+			  	</c:forEach>
 			  
 		</select> 
 	</div>
@@ -163,10 +163,9 @@ button:hover {
 	<div class="mainselection" >	
 		<select name="movieTime" id="movieTime">
 		 	  <option selected disabled>Select Time</option>
-			  <option value="morning">Morning</option>
-			  <option value="noon">Noon</option>
-			  <option value="evening">Evening</option>
-			  <option value="night">Night</option>
+			  <c:forEach items="${timings}" var="time">
+			  		<option value="mum"> ${ time } </option>
+			  	</c:forEach>
 		</select> 
 	</div>	
 	<br>
